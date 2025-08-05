@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    height: 100vh; /*vyu height*/
+    width: 100vw; /*vyu width ou vyu port*/
+    background-color: black;
+}
+
+body{
+    background:  url('../pacote-d013/imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    height: 100vh;
+    position: relative;
+}
+
+#telefone{
+    background-color: rgba(116, 18, 18, 0.795);
+    height: 627px;
+    width: 311px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:  url('../pacote-d013/imagens/frame-iphone.png');
+}
+iframe#tela{
+    position: relative;
+    top: 79px;
+    left: 21px;
+    width: 268px;
+    height: 472px;
+}
+
+/*Se quiser mudar de lado os botões pode-se usar a configuração de css= 
+
+#rs{
+    text-align: center;
+}
+
+*/
+
+#rs img{
+    width: 80px; /*lembrar de fazer o width adaptativo para o tamanho de tela!*/
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.849);
+    box-sizing: border-box;
+}
+
+/*Obs: A configuração de borda abaixo coloca a mesma porem ela não faz parte do objeto que no caso é a imagem, então o efeito de uma acaba por afetar as outras, para que uma não afete a outra precisa colocar uma configuração que faça com que a borda faça parte do objeto, que no caso é o css= box-sizzing.*/
+
+#rs img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.562);
+    transform: translate(-1.5px, -1.5px);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.774);
+    transition: transform .2s, border .4s; /*efeito de transição ao passar o mouse sobre o icone. o tempo .2s é igual a 0.2s.*/
+}
